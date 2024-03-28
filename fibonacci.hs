@@ -8,7 +8,7 @@ fibInternal n acc = fibInternal (n - 1, fibInternal (n - 2, acc))
 
 main :: IO ()
 main = do
-  print $ fact 5
+  print $ fib 10
 
 -- fib (5, 0)
 -- fib (4, fib (3, 0))
