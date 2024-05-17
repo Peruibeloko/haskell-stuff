@@ -4,7 +4,7 @@ fib n = fibInternal n 0
 fibInternal :: Int -> Int -> Int
 fibInternal 0 acc = 0 + acc
 fibInternal 1 acc = 1 + acc
-fibInternal n acc = fibInternal (n - 1, fibInternal (n - 2, acc))
+fibInternal n acc = fibInternal (n - 1) $ fibInternal (n - 2) acc
 
 main :: IO ()
 main = do
