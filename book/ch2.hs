@@ -1,9 +1,7 @@
 module Main where
 
 import Data.Char (chr, ord)
-
-runMany :: [String] -> IO ()
-runMany exs = mapM_ putStrLn exs
+import Utils
 
 ex1a :: String
 ex1a = show [truncate $ 11 ** x | x <- [0 .. 6]]
@@ -56,12 +54,6 @@ ex6 s
 
 ex7 :: Int -> (Int, Int, Int, Int)
 ex7 i = (2 * i, 3 * i, 4 * i, 5 * i)
-
-printLn :: (Show a) => a -> IO ()
-printLn a = putStrLn $ show a
-
-title :: String -> IO ()
-title str = putStrLn $ "\n\ESC[31m" ++ str ++ "\ESC[0m"
 
 main :: IO ()
 main = do
